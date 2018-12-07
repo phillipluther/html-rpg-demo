@@ -1,0 +1,38 @@
+{
+  "name": "html-rpg-demo",
+  "version": "0.1.0",
+  "description": "Little experiment with retro-RPG game dev.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && NODE_ENV=production run-p build:js build:html",
+    "build:js": "rollup -c",
+    "build:html": "node scripts/build-html",
+    "clean": "rm -rf demo",
+    "dev": "npm run clean && npm run build:html && rollup -c -w",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillipluther/html-rpg-demo.git"
+  },
+  "keywords": [],
+  "author": "Phillip Luther <dev@phillipluther.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phillipluther/html-rpg-demo/issues"
+  },
+  "homepage": "https://github.com/phillipluther/html-rpg-demo#readme",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "fs-extra": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^0.67.4",
+    "rollup-plugin-livereload": "^0.6.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-serve": "^0.6.0",
+    "rollup-plugin-terser": "^3.0.0"
+  }
+}
