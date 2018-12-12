@@ -1,4 +1,6 @@
-import testModule from './test-module';
+import createScene from './engine/create-scene';
+import './main.css';
 
-console.log('All good?');
-testModule();
+let scene = createScene();
+scene.init();
+scene.play();

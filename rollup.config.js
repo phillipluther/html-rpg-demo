@@ -26,6 +26,8 @@ export default {
             contentBase: 'demo',
             port: 8080
         }),
-        (PROD === false) && livereload()
+        (PROD === false) && livereload({
+            watch: 'demo'
+        })
     ]
 }
